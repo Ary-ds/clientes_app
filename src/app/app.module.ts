@@ -9,6 +9,10 @@ import { ClienteService } from './clientes/cliente.service';
 //importamos las clases
 import { RouterModule, Routes } from '@angular/router';
 
+//importamos 
+import {HttpClientModule} from '@angular/common/http';
+
+
 
 //creamos la constante de las routas
 const routes: Routes = [
@@ -25,6 +29,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
