@@ -6,6 +6,16 @@ import { ClientesComponent } from './clientes/clientes.component';
 
 import { ClienteService } from './clientes/cliente.service';
 
+//importamos las clases
+import { RouterModule, Routes } from '@angular/router';
+
+
+//creamos la constante de las routas
+const routes: Routes = [
+  {path: '', redirectTo: '/clientes', pathMatch: 'full'},
+  {path: 'clientes', component: ClientesComponent},
+];
+
 
 
 @NgModule({
@@ -14,7 +24,8 @@ import { ClienteService } from './clientes/cliente.service';
     ClientesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
   bootstrap: [AppComponent]

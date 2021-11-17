@@ -3,6 +3,8 @@ import { Cliente } from './cliente';
 import { CLIENTES } from './clientes.json';
 import { ClienteService } from './cliente.service';
 
+
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
