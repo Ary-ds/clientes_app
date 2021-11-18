@@ -1,7 +1,7 @@
 export class Cliente {
 
     id?: number;
-    nombre?: String;
+    nombre?: String = 'martes';
     apellido?: String;
     email?: String;
     fecha?: String;

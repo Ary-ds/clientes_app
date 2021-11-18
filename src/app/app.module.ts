@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 //importamos el modulo form
 import { FormsModule } from '@angular/forms';
+import { FormComponent } from './clientes/form.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
 
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'clientes', component: ClientesComponent},
+  {path: 'clientes/form', component: FormComponent},
  
 
 ];
@@ -35,6 +37,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ClientesComponent,
+    FormComponent,
   
   
   ],
