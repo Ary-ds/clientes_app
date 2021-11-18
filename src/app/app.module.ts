@@ -9,15 +9,24 @@ import { ClienteService } from './clientes/cliente.service';
 //importamos las clases
 import { RouterModule, Routes } from '@angular/router';
 
-//importamos 
+//importamos para poder utilizar en la clase service
 import {HttpClientModule} from '@angular/common/http';
+
+//importamos el modulo form
+import { FormsModule } from '@angular/forms';
+
+
+
 
 
 
 //creamos la constante de las routas
 const routes: Routes = [
+
   {path: '', redirectTo: '/clientes', pathMatch: 'full'},
   {path: 'clientes', component: ClientesComponent},
+ 
+
 ];
 
 
@@ -25,11 +34,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent
+    ClientesComponent,
+  
+  
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [ClienteService],
