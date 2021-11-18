@@ -41,10 +41,17 @@ export class ClienteService {
    return this.http.post<Cliente>(this.urlEndPoint, cliente, {headers: this.httpHeaders});
  }
 
+
  //implementamos el metodo actualizar cliente
    getCliente(id: any): Observable<Cliente> {
    return this.http.get<Cliente>(`${this.urlEndPoint}/${id}`)
  }
+
+
+ //para acutualizar o modificar
+ update(cliente: Cliente): Observable<Cliente>{
+  return this.http.put<Cliente>(`${this.urlEndPoint}/${cliente.id}`, cliente, {headers: this.httpHeaders})
+}
 
  
 
