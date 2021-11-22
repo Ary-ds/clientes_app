@@ -31,8 +31,10 @@ export class ClienteService {
 
   //para ver el listado 
  getClientes(): Observable<Cliente[]> {
+
   // return of(CLIENTES);
      return this.http.get<Cliente[]>(this.urlEndPoint);
+
  }
 
 
